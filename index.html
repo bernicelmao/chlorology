@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pure Air, Powered by Micro</title>
+<style>
+:root{--bg:#f4f9f3;--surface:#fff;--text:#14291c;--muted:#4a6355;--accent:#2e8b57;--accent-ink:#fff;--border:#d3e2d6;--hero1:#dff2e4;--hero2:#e3f1f6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1912;--surface:#15261b;--text:#e6f1ea;--muted:#9db8a8;--accent:#5fcf90;--accent-ink:#0d1912;--border:#27412f;--hero1:#14301f;--hero2:#122b33;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1912;--surface:#15261b;--text:#e6f1ea;--muted:#9db8a8;--accent:#5fcf90;--accent-ink:#0d1912;--border:#27412f;--hero1:#14301f;--hero2:#122b33;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--border)}
+nav{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.2px}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--accent)}
+section{max-width:960px;margin:0 auto;padding:64px 20px}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:0 0 16px}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 8px}
+h3{margin:0 0 6px;font-size:1.05rem}
+p{margin:0 0 14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px}
+.eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.12em}
+#home{max-width:none;background:linear-gradient(135deg,var(--hero1),var(--hero2));border-bottom:1px solid var(--border)}
+#home .in{max-width:960px;margin:0 auto}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:11px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin:6px 10px 0 0}
+.btn.alt{background:transparent;color:var(--text);border:1px solid var(--border)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
+.card p{color:var(--muted);margin:0;font-size:.95rem}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:10px}
+.big{font-size:2.2rem;font-weight:800;color:var(--accent);line-height:1.1;margin-bottom:6px}
+.ph{border:2px dashed var(--border);border-radius:14px;padding:36px 20px;text-align:center;color:var(--muted);margin-top:22px;background:var(--surface)}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--hero1);border:1px solid var(--border);margin-bottom:10px}
+.todo{color:var(--accent);font-weight:600}
+.note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--accent);padding-left:12px;margin-top:18px}
+footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<header><nav>
+<span class="todo">Chlorology</span></span>
+<ul><li><a href="#home">Home</a></li><li><a href="#product">Product</a></li><li><a href="#team">Team</a></li><li><a href="#Target">Target</a></li></ul>
+</nav></header>
+
+<section id="home"><div class="in">
+<p class="eyebrow">Conrad Challenge · Energy &amp; Environment</p>
+<h1>Pure air, powered by a microalgae innovation.</h1>
+<p class="lead">Dense city streets trap nitrogen dioxide and particulate matter, putting residents, especially people with asthma, at risk. We are building a solar-powered photobioreactor that cleans the air where people actually breathe it.</p>
+<a class="btn" href="#product">See how it works</a><a class="btn alt" href="#Target">Our Target</a>
+</div></section>
+
+<section id="product">
+<p class="eyebrow">Product</p>
+<h2>A living air purifier</h2>
+<p class="lead">Our photobioreactor uses Chlorella microalgae, kept growing by solar-powered LEDs, to take pollutants out of city air and give back clean oxygen.</p>
+<div class="grid">
+<div class="card"><span class="num">1</span><h3>Air in</h3><p>An intake vent draws polluted street-level air into the unit.</p></div>
+<div class="card"><span class="num">2</span><h3>Algae at work</h3><p>Chlorella uses light and the nitrogen in NO₂, and captures CO₂ through photosynthesis.</p></div>
+<div class="card"><span class="num">3</span><h3>Clean air out</h3><p>An exhaust vent releases cleaner air and fresh oxygen back into the street.</p></div>
+<div class="card"><span class="num">4</span><h3>Harvest &amp; reuse</h3><p>Harvested biomass becomes a nutrient-rich fertiliser for local farms.</p></div>
+</div>
+<div class="grid">
+<div class="card"><h3>Self-powered</h3><p>Solar-powered internal LEDs keep the culture growing continuously.</p></div>
+<div class="card"><h3>Non-toxic</h3><p>A natural process with no harsh chemicals in the air we release.</p></div>
+<div class="card"><h3>Built for streets</h3><p>Weather-resistant polycarbonate shell and automated monitoring.</p></div>
+</div>
+<div class="ph"><strong>3D CAD model</strong><br>*Put CAD here*.</div>
+</section>
+
+<section id="team">
+<p class="eyebrow">Team</p>
+<h2>Meet the team</h2>
+<p class="lead"><span class="todo">[Add ~150 words: how your team formed, why this problem matters to you, and your school or location.]</span></p>
+<div class="grid">
+<div class="card"><div class="avatar"></div><h3 class="todo">[Name]</h3><p>[Role, e.g. biology lead]</p></div>
+<div class="card"><div class="avatar"></div><h3 class="todo">[Name]</h3><p>[Role, e.g. engineering and CAD]</p></div>
+<div class="card"><div class="avatar"></div><h3 class="todo">[Name]</h3><p>[Role, e.g. business and outreach]</p></div>
+</div>
+<p class="note">Before adding photos or surnames, confirm each team member (and parent or guardian) is happy for them to be public.</p>
+</section>
+
+<section id="Target">
+<p class="eyebrow">Target</p>
+<h2>What we are aiming for</h2>
+<p class="lead">Our performance goals and who we want to help first.</p>
+<div class="grid">
+<div class="card"><div class="big">80–90%</div><h3>NO₂ removal per hour</h3><p>Design target within the unit’s intake radius.</p></div>
+<div class="card"><div class="big">Daily</div><h3>CO₂ captured</h3><p>We will track the total mass converted into biomass each day.</p></div>
+<div class="card"><div class="big">Circular</div><h3>Biomass reuse</h3><p>Harvested algae supplied to local farms as fertiliser.</p></div>
+</div>
+<div class="grid">
+<div class="card"><h3>Who we serve</h3><p>City councils seeking cost-effective ways to cut NO₂ and CO₂, plus commercial developers and science park managers, for the benefit of residents in dense areas.</p></div>
+<div class="card"><h3>First pilots</h3><p>University science departments and office hubs along busy routes such as St Clement’s in Oxford.</p></div>
+</div>
+<p class="note">These are design Target. We will publish test results here as we gather them.</p>
+</section>
+
+<footer>© 2026 <span class="todo">NOCO2</span> · Conrad Challenge 2026–2027</footer>
+</body>
+</html>
