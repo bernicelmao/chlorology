@@ -128,6 +128,7 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
 <div class="card"><h3>Built for streets</h3><p>Weather-resistant polycarbonate shell and automated monitoring.</p></div>
 </div>
 <div class="cad-layout">
+  
   <model-viewer
     id="cad-viewer"
     src="./demo-project.glb"
@@ -155,6 +156,44 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
       aria-pressed="false">
       1
     </button>
+      <button
+  type="button"
+  class="cad-marker"
+  slot="hotspot-photobioreactor"
+  data-position="0m 1m 0m"
+  data-normal="0 0 1"
+  data-part="photobioreactor"
+  aria-label="About the photobioreactor"
+  aria-controls="cad-info"
+  aria-pressed="false">
+  2
+</button>
+
+<button
+  type="button"
+  class="cad-marker"
+  slot="hotspot-top-light"
+  data-position="0m 3m 0m"
+  data-normal="0 0 1"
+  data-part="topLight"
+  aria-label="About the top light"
+  aria-controls="cad-info"
+  aria-pressed="false">
+  3
+</button>
+
+<button
+  type="button"
+  class="cad-marker"
+  slot="hotspot-ph-regulator"
+  data-position="0m 4m 0m"
+  data-normal="0 0 1"
+  data-part="phRegulator"
+  aria-label="About the pH regulator"
+  aria-controls="cad-info"
+  aria-pressed="false">
+  4
+</button>
   </model-viewer>
 
   <aside class="cad-info" id="cad-info">
@@ -166,7 +205,8 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
     </div>
   </aside>
 </div>
-
+</section>
+  
 <section id="team">
 <p class="eyebrow">Team</p>
 <h2>Meet the team</h2>
@@ -200,12 +240,24 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
 
 <script>
   const cadParts = {
-    algae: {
-      title: "Algae chamber",
-      text: "The chamber contains the Chlorella culture used in the design."
-    }
-  };
-
+  algae: {
+    title: "Algae chamber",
+    text: "The chamber contains the Chlorella culture used in the design."
+  },
+  photobioreactor: {
+    title: "Photobioreactor",
+    text: "The photobioreactor provides a controlled environment for the microalgae, supplying light and circulating air through the culture."
+  },
+  topLight: {
+    title: "Top light",
+    text: "The LED unit directs light towards the reflective hood, which spreads the light downwards."
+  },
+  phRegulator: {
+    title: "pH regulator",
+    text: "The pH regulation system monitors the culture’s acidity and controls buffer dosing to help maintain suitable growing conditions."
+  }
+};
+  
   const cadMarkers = document.querySelectorAll(".cad-marker");
 
   cadMarkers.forEach((marker) => {
