@@ -140,6 +140,38 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
     transform: translateX(-90px);
   }
 }
+nav {
+  flex-wrap: nowrap;
+}
+
+nav ul {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  nav {
+    gap: 12px;
+    padding: 12px;
+  }
+  .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+    transform: none;
+  }
+  .brand img {
+    width: clamp(100px, 28vw, 220px);
+    height: auto;
+    max-width: 100%;
+  }
+  nav ul {
+    gap: clamp(8px, 2vw, 16px);
+    margin-left: auto;
+  }
+  nav a {
+    font-size: clamp(12px, 2vw, 15px);
+  }
+}
 </style>
   <script type="module"
   src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
