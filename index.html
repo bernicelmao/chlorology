@@ -24,7 +24,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--border)}
 nav{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .brand{font-weight:700;letter-spacing:.2px}
-nav ul{display:flex;gap:18px;list-:none;margin:0;padding:0}
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
 nav a:hover{color:var(--accent)}
 section{max-width:960px;margin:0 auto;padding:64px 20px}
@@ -102,6 +108,26 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
     height: 420px;
   }
 }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .brand img {
+    height: 36px;
+    max-width: 160px;
+  }
+}
 </style>
   <script type="module"
   src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
@@ -109,7 +135,9 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
 </head>
 <body>
 <header><nav>
-<span class="todo">Chlorology</span>
+<a class="brand" href="#home" aria-label="Chlorology home">
+  <img src="./logo.png" alt="Chlorology">
+</a>
 <ul><li><a href="#home">Home</a></li><li><a href="#product">Product</a></li><li><a href="#team">Team</a></li><li><a href="#Target">Target</a></li></ul>
 </nav></header>
 
