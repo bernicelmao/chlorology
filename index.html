@@ -143,12 +143,10 @@ footer{max-width:960px;margin:0 auto;padding:28px 20px 40px;color:var(--muted);f
 nav {
   flex-wrap: nowrap;
 }
-
 nav ul {
   flex-shrink: 0;
   white-space: nowrap;
 }
-
 @media (max-width: 900px) {
   nav {
     gap: 12px;
@@ -171,6 +169,13 @@ nav ul {
   nav a {
     font-size: clamp(12px, 2vw, 15px);
   }
+}
+footer a {
+  color: var(--text);
+  text-underline-offset: 3px;
+}
+footer a:hover {
+  color: var(--accent);
 }
 </style>
   <script type="module"
@@ -315,7 +320,17 @@ nav ul {
 <p class="note">These are our targets. We will publish test results here as we gather them.</p>
 </section>
 
-<footer> © 2026 <span class="todo">NOCO2</span> · Conrad Challenge 2026–2027
+<footer>
+  <p><strong>Chlorology</strong></p>
+
+  <p>
+    Contact:
+    <a href="mailto:chlorology@oxf.gdst.net">
+      chlorology@oxf.gdst.net
+    </a>
+  </p>
+  <p><a href="./privacy.html">Privacy policy</a></p>
+  <p> © 2026-2027 Chlorology · Conrad Challenge 2026–2027</p>
 </footer>
 
 <script>
